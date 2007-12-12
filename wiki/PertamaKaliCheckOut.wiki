@@ -5,9 +5,9 @@
 Bagi pengembang yang baru pertama kali menggunakan subversion (svn).
 
 *Persiapan*
-  * Platform: Linux. Untuk Windows silahkan coba [http://tortoisesvn.tigris.org/ tortoisesvn].
+  * Platform: Linux
   * Webserver: Apache
-  * Program subversion client terinstal
+  * Program subversion client terinstal. Untuk Windows silahkan coba [http://tortoisesvn.tigris.org/ tortoisesvn].
   * Koneksi Internet
   * Sudah memiliki username sisrama ALIAS sudah memiliki account Gmail. Bisa buat disini: http://www.google.com/accounts/NewAccount. Setelah itu silahkan kontak asofyan AT gmail.com atau bwidyasanyata AT gmail.com untuk didaftarkan sebagai tim pengembang.
 
