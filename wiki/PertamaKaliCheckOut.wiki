@@ -17,7 +17,7 @@ Bagi pengembang yang baru pertama kali menggunakan subversion (svn).
   # Login sebagai root
   # Pindah ke direktori `DocumentRoot` (mis: /var/www)
   # Arahkan browser ke website SISRAMA google code http://code.google.com/p/sisrama
-  # Perintah checkout tertulis lengkap di halaman [http://code.google.com/p/sisrama/source source], ATAU klik tab [Source] di menu_tab bagian atas halaman. Syntaxnya (contoh username: bwidyasanyata): `svn checkout https://sisrama.googlecode.com/svn/trunk/ sisrama --username bwidyasanyata`
+  # Perintah checkout tertulis lengkap di halaman [http://code.google.com/p/sisrama/source source], ATAU klik tab *Source* di menu_tab bagian atas halaman. Syntaxnya (contoh username: bwidyasanyata): `svn checkout https://sisrama.googlecode.com/svn/trunk/ sisrama --username bwidyasanyata`
   # Copy perintah tersebut dan paste ke terminal, lalu <ENTER> :-)
 
 Berikut contoh screenshot:
