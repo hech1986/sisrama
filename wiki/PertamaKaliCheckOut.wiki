@@ -6,14 +6,16 @@ Bagi pengembang yang baru pertama kali menggunakan subversion (svn).
 
 *Persiapan*
   * Platform: Linux. Untuk Windows silahkan coba [http://tortoisesvn.tigris.org/ tortoisesvn].
+  * Webserver: Apache
+  * Program subversion terinstal
   * Koneksi Internet
-  * Sudah memiliki username sisrama. Jika belum silahkan kontak asofyan [AT] gmail.com atau bwidyasanyata [AT] gmail.com.
+  * Sudah memiliki username sisrama. Jika belum silahkan kontak asofyan AT gmail.com atau bwidyasanyata AT gmail.com.
 
 
 *Jalankan Perintah*
   # Buka program Terminal
   # Login sebagai root
-  # Pindah ke direktori DocumentRoot webserver (mis: /var/www)
+  # Pindah ke direktori `DocumentRoot` (mis: /var/www)
   # Arahkan browser ke website SISRAMA google code http://code.google.com/p/sisrama
   # Perintah checkout tertulis lengkap di halaman [http://code.google.com/p/sisrama/source source], ATAU klik tab [Source] di menu_tab bagian atas halaman. Syntaxnya (contoh username: bwidyasanyata): `svn checkout https://sisrama.googlecode.com/svn/trunk/ sisrama --username bwidyasanyata`
   # Copy perintah tersebut dan paste ke terminal, lalu <ENTER> :-)
