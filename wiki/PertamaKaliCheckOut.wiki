@@ -226,3 +226,7 @@ Checked out revision 12.
 DONE! Alhamdulillah...
 
 Gampang khan? :)
+
+*Author:* bwidyasanyata AT gmail.com |
+*Version:* 1.0 |
+*Date:* 13-Dec-2007
