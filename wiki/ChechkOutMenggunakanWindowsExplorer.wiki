@@ -1,0 +1,25 @@
+= Bagaimana cara checkout (unduh) source code menggunakan MS Windows =
+
+
+*Persiapan*
+  * Platform: Windows
+  * Program subversion client terinstal. Menggunakan Windows [http://tortoisesvn.tigris.org/ tortoisesvn].
+  * Koneksi Internet
+  * Sudah memiliki username sisrama ALIAS sudah memiliki account Google atau Gmail. Bisa buat disini: http://www.google.com/accounts/NewAccount. Setelah itu silahkan kontak asofyan AT gmail.com atau bwidyasanyata AT gmail.com untuk didaftarkan sebagai tim pengembang.
+
+
+1. Install Program SVN, TortoiseSVN (silahkan donwload d atas)
+2. Setelah Install, restart komputer
+3. Create folder, misal: C:\Program Files\xampp\htdocs\sisrama
+4. Klik Kanan pada folder tersebut, pilih SVN Checkout ...
+5. Muncul dialog Checkout, isi:
+   URL of repository : https://sisrama.googlecode.com/svn/trunk/
+   Checkout directory: C:\Program Files\xampp\htdocs\sisrama
+6. Pencet button OK
+7. Muncul windows Authentication
+   Isi Username: untung (contoh)
+   Password: (generate password, seperti di penjelasan om Bayu... :) )
+8. Process donwload coding2 untuk pertama kali.
+9. Selesai.....
+
+tidur dulu ah....
