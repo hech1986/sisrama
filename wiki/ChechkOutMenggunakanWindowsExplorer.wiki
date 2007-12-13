@@ -17,14 +17,19 @@
 4. Klik Kanan pada folder tersebut, pilih SVN Checkout ...
 
 5. Muncul dialog Checkout, isi:
+
    URL of repository : https://sisrama.googlecode.com/svn/trunk/
+
    Checkout directory: C:\Program Files\xampp\htdocs\sisrama
 
 6. Pencet button OK
 
 7. Muncul windows Authentication
+
    Isi Username: untung (contoh)
+
    Password: (generate password, seperti di penjelasan om Bayu... :) )
+
 
 8. Process donwload coding2 untuk pertama kali.
 
