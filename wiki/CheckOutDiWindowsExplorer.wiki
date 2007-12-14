@@ -1,4 +1,4 @@
-= Bagaimana cara checkout (unduh) source code menggunakan MS Windows =
+ Bagaimana cara checkout (unduh) source code menggunakan MS Windows =
 
 
 *Persiapan*
@@ -16,12 +16,10 @@
  # Muncul dialog Checkout, isi:
   * URL of repository : https://sisrama.googlecode.com/svn/trunk/
   * Checkout directory: C:\Program Files\xampp\htdocs\sisrama
-
  # Pencet button OK
  # Muncul windows Authentication
   * Isi Username: untung (contoh)
   * Password: (generate password, seperti di penjelasan om Bayu... :) )
-
  # Process donwload coding2 untuk pertama kali.
  # Selesai.....
 
