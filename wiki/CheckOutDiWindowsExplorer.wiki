@@ -10,31 +10,20 @@
 
 *Langkah-Langkah:*
  # Install Program SVN, TortoiseSVN (silahkan donwload di atas)
+ # Setelah Install, restart komputer
+ # Create folder, misal: C:\Program Files\xampp\htdocs\sisrama
+ # Klik Kanan pada folder tersebut, pilih SVN Checkout ...
+ # Muncul dialog Checkout, isi:
+  * URL of repository : https://sisrama.googlecode.com/svn/trunk/
+  * Checkout directory: C:\Program Files\xampp\htdocs\sisrama
 
-2. Setelah Install, restart komputer
+ # Pencet button OK
+ # Muncul windows Authentication
+  * Isi Username: untung (contoh)
+  * Password: (generate password, seperti di penjelasan om Bayu... :) )
 
-3. Create folder, misal: C:\Program Files\xampp\htdocs\sisrama
-
-4. Klik Kanan pada folder tersebut, pilih SVN Checkout ...
-
-5. Muncul dialog Checkout, isi:
-
-   URL of repository : https://sisrama.googlecode.com/svn/trunk/
-
-   Checkout directory: C:\Program Files\xampp\htdocs\sisrama
-
-6. Pencet button OK
-
-7. Muncul windows Authentication
-
-   Isi Username: untung (contoh)
-
-   Password: (generate password, seperti di penjelasan om Bayu... :) )
-
-
-8. Process donwload coding2 untuk pertama kali.
-
-9. Selesai.....
+ # Process donwload coding2 untuk pertama kali.
+ # Selesai.....
 
 
 Di Ketik oleh: Untung, 14 Dec 2007, 00:05 WIB
