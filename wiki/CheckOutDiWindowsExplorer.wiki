@@ -9,8 +9,7 @@
 
 
 *Langkah-Langkah:*
-
-# Install Program SVN, TortoiseSVN (silahkan donwload di atas)
+ # Install Program SVN, TortoiseSVN (silahkan donwload di atas)
 
 2. Setelah Install, restart komputer
 
