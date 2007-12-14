@@ -1,6 +1,7 @@
 Module-module yang terdapat di dalam erp school
 
 1. Sistem Informasi Manajemen Kurikulum
+Manajemen kurikulum merupakan subtansi manajemen yang utama di sekolah. Prinsip dasar manajemen kurikulum ini adalah berusaha  agar proses pembelajaran dapat berjalan dengan baik, dengan tolok ukur pencapaian tujuan oleh siswa dan mendorong guru untuk menyusun dan terus menerus menyempurnakan strategi pembelajarannya
 
 2. Sistem Informasi Manajemen Kesiswaan
 
