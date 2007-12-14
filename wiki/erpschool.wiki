@@ -1,6 +1,11 @@
 Module-module yang terdapat di dalam erp school
+
 1. Sistem Informasi Manajemen Kurikulum
+
 2. Sistem Informasi Manajemen Kesiswaan
+
 3. Sistem Informasi Manajemen Personalia
+
 4. Sistem Informasi Manajemen Keuangan
+
 5. Sistem Informasi Manajemen Sarana dan Prasarana Sekolah
