@@ -8,9 +8,9 @@
   * Sudah memiliki username sisrama ALIAS sudah memiliki account Google atau Gmail. Bisa buat disini: http://www.google.com/accounts/NewAccount. Setelah itu silahkan kontak asofyan AT gmail.com atau bwidyasanyata AT gmail.com untuk didaftarkan sebagai tim pengembang.
 
 
-1. Install Program SVN, TortoiseSVN (silahkan donwload di atas)
+#. Install Program SVN, TortoiseSVN (silahkan donwload di atas)
 
-2. Setelah Install, restart komputer
+#. Setelah Install, restart komputer
 
 3. Create folder, misal: C:\Program Files\xampp\htdocs\sisrama
 
