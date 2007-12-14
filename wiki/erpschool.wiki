@@ -1,4 +1,4 @@
-Module-module yang terdapat di dalam erp school
+*Module-module yang terdapat di dalam erp school*
 
 1. Sistem Informasi Manajemen Kurikulum
 
