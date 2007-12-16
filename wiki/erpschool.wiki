@@ -11,5 +11,6 @@
  * *Sistem Informasi Manajemen Keuangan*
 
  * *Sistem Informasi Manajemen Sarana dan Prasarana Sekolah*
+ * *Sistem Informasi Asrama*
 
 ... to be continue...
