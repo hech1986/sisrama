@@ -12,6 +12,6 @@
 
  * *Sistem Informasi Manajemen Sarana dan Prasarana Sekolah*
 
- * *Sistem Informasi Asrama*
+ * *Sistem Informasi Manajemen Asrama*
 
 ... to be continue...
