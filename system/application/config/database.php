@@ -39,11 +39,15 @@ $db['default']['password'] = "";
 $db['default']['database'] = "sisrama";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
-$db['default']['active_r'] = TRUE;
+# ci 1.6 - f2b
+#$db['default']['active_r'] = TRUE;
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
 $db['default']['cachedir'] = "";
-
+# ci 1.6 f2b
+$active_record = TRUE;
+$db['default']['char_set'] = "utf8";
+$db['default']['dbcollat'] = "utf8_general_ci";
 
 ?>

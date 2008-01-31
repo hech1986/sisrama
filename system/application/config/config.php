@@ -307,5 +307,7 @@ $config['time_reference'] = 'local';
 */
 $config['rewrite_short_tags'] = FALSE;
 
+# upgrade to CI 1.6
+$config['sess_time_to_update'] = 300;
 
 ?>
