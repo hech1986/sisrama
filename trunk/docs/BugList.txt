@@ -1,0 +1,9 @@
+#Daftar bug sementara, sebelum ada bugtrack
+#KodeBug: B(Bug).Modul.SubModul.IDNo.Type(MVCT-Optional)
+#KodeBug,Status, Penjelasan,TanggalTest,Nama Tester, Tanggal bugfix,Nama Developer
+
+A. Modul Master 
+	D. Submodul Students
+	C. Submodul Periods
+	B. Submodul Campus
+	A. Submodul Region

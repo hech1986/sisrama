@@ -74,13 +74,13 @@ class TUMaster extends Controller
 
     function testPeriodsModel()
     {
-	//prepare
+		//prepare
         $this->load->library('unit_test');
         
         //model
         $this->load->model('master/PeriodsModel');
 
-	//create
+		//create
         $arrPost = array('begin' => '2008-02-10','end' => '2008-02-11','active' => 1);
         $this->PeriodsModel->savePeriods($arrPost);
 	
@@ -89,8 +89,8 @@ class TUMaster extends Controller
         $row = $rs->result() ; 
         echo $this->unit->run($row[0]->begin, $arrPost['begin'], 'Master Periods Model Save' );
 
-	//UPDATE
-	$arrPost = array('begin' => '2008-02-09','periodsid'=> $row[0]->id,'end' => '2008-02-11','active' => 1);
+		//UPDATE
+		$arrPost = array('begin' => '2008-02-09','periodsid'=> $row[0]->id,'end' => '2008-02-11','active' => 1);
         $this->PeriodsModel->savePeriods($arrPost);
         
         $sql = 'SELECT id,begin FROM periods where begin= ? and end=? and active=?';
@@ -107,8 +107,59 @@ class TUMaster extends Controller
         echo $this->unit->run($row[0]->resultRec, 0, 'Master Periods Model Remove' );
 
     }
+	
+	function testStudentsModel()
+    {
+		//prepare
+        $this->load->library('unit_test');
+        
+        //model
+        $this->load->model('master/StudentsModel');
+		
+		//create
+        $arrPost = array('regno' => 'student1'
+									,'name' => 'RADHITYA'
+									,'parent' => 'B&F'
+									,'address' => 'Jl. Jawa'
+									,'city' => 'Depok'
+									,'phone' => '0101010101'
+									,'birthdate' => 'Depok'
+									,'birthplace' => '0101010101'
+									);
+        $this->StudentsModel->saveStudents($arrPost);
+	
+        $sql = 'SELECT id,regno FROM students where regno=?';
+        $rs = $this->db->query($sql,array($arrPost['regno'])); 
+        $row = $rs->result() ; 
+        echo $this->unit->run($row[0]->regno, $arrPost['regno'], 'Master Students Model Save' );
+
+		//UPDATE
+		$arrPost = array('regno' => 'student1'
+							,'name' => 'RADHITYA RIZQI'
+							,'parent' => 'B&F'
+							,'address' => 'Jl. Jawa'
+							,'city' => 'Depok'
+							,'phone' => '0101010101'
+							,'birthdate' => 'Depok'
+							,'birthplace' => '0101010101'
+							,'studentsid'=> $row[0]->id);
+
+        $this->StudentsModel->saveStudents($arrPost);
+        
+        $sql = 'SELECT id,regno FROM students where id=?';
+        $rs = $this->db->query($sql,array($row[0]->id)); 
+        $row = $rs->result() ;
+        echo $this->unit->run($row[0]->regno,$arrPost['regno'] , 'Master Students Model Update' );
+        
+        //remove test record
+        $this->StudentsModel->removeStudents($arrPost);
+        
+        $sql = 'SELECT count(*) as resultRec FROM students where id= ? ';
+        $rs = $this->db->query($sql,array($row[0]->id)); 
+        $row = $rs->result() ; 
+        echo $this->unit->run($row[0]->resultRec, 0, 'Master Students Model Remove' );
+		
+	}
 }
-
-
 
 ?> 
