@@ -9,8 +9,10 @@ class Students extends Controller {
 
         $data = array(
                 'studentsList' => $this->StudentsModel->listStudents(),
-                'studentsData' => array('regno' => ''
+                'studentsData' => array('id' => ''
+									,'regno' => ''
 									,'name' => ''
+									,'class' => ''
 									,'parent' => ''
 									,'address' => ''
 									,'city' => ''
@@ -42,7 +44,18 @@ class Students extends Controller {
         $regData = $this->StudentsModel->editStudents($this->uri->uri_to_assoc(4));
         $data = array(
             'studentsList' => $this->StudentsModel->listStudents(),
-            'studentsData' => array()
+            'studentsData' => array('id' => $regData[0]->id
+									,'regno' => $regData[0]->regno
+									,'name' => $regData[0]->name
+									,'class' => $regData[0]->class
+									,'parent' => $regData[0]->parent
+									,'address' => $regData[0]->address
+									,'city' => $regData[0]->city
+									,'phone' => $regData[0]->phone
+									,'birthdate' => $regData[0]->birthdate
+									,'birthplace' => $regData[0]->birthplace
+									)
+			
         );
 
         $this->load->view("master/studentsview",$data);

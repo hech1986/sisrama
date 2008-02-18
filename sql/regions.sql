@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 -- 
 -- Host: localhost
--- Generation Time: Feb 11, 2008 at 10:57 AM
+-- Generation Time: Feb 18, 2008 at 01:03 PM
 -- Server version: 5.0.45
 -- PHP Version: 5.2.3-1ubuntu6.3
 
@@ -24,15 +24,9 @@ CREATE TABLE IF NOT EXISTS `regions` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY  (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- 
 -- Dumping data for table `regions`
 -- 
 
-INSERT INTO `regions` (`id`, `name`) VALUES 
-(1, 'testza'),
-(2, 'ubah'),
-(3, 'test2'),
-(6, 'line'),
-(7, 'testing');
