@@ -61,15 +61,13 @@ break;
   <tr> 
     <td align="right">
 	 	<input type="button" class="formbox" value=" Save " OnClick="javascript:this.form.submit()">
-	 	
-	 	
-		<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/campus/listcampus");?>'">
-	 	
+	 	<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/campus/listcampus");?>'">
 	 	<input type="button" class="formbox" value=" Close " OnClick="javascript:window.close()">
-	 	    </td>
-  </tr>  <tr> 
-    <td align="right">&nbsp;</td>
-  </tr>
+	</td>
+  </tr>  
+	<tr> 
+		<td align="right">&nbsp;</td>
+	</tr>
 
   <tr>
     <td><!-- #BeginEditable "table" -->
@@ -79,8 +77,6 @@ break;
           <td class="palareport">Campus</td>
         </tr>
         <?  
-
-
             $line=0;
             foreach($campusList as $item) {
         ?>

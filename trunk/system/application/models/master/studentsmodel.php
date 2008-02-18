@@ -10,7 +10,7 @@
     function listStudents() 
     { 
 
-        $rs = $this->db->query('SELECT id,name FROM students order by name'); 
+        $rs = $this->db->query('SELECT id,regno,name,class,parent,address,city,phone,birthdate,birthplace FROM students order by name'); 
         $row = $rs->result() ; 
           
         return $row; 
@@ -21,12 +21,14 @@
         $this->load->helper('array');
         
         $studentsId = element('studentsid', $arrPost, NULL);
-        
+        unset($arrPost['studentsid']);
         if ($studentsId == null)
         {
-			unset($arrPost['studentsid']);
+			
+			
             $this->db->insert('students', $arrPost); 
             log_message('debug', '>>>$sql: '.$this->db->last_query());
+			
         } 
         else
         {
@@ -34,10 +36,13 @@
 							SET 
 								regno = ?
 								,name = ?
+								,class=?
 								,parent = ?
 								,address = ?
 								,city = ?
-								,phone = ? 								
+								,phone = ?
+								,birthdate=?
+								,birthplace=?
 							WHERE students.id = ?';
            $arrPost['studentsid']=$studentsId;
             $this->db->query($sql,$arrPost); 
@@ -49,7 +54,7 @@
     function editStudents($array)
     {
         //get by id
-        $sql='SELECT id,name FROM students where id= ?';
+        $sql='SELECT id,regno,name,class,parent,address,city,phone,birthdate,birthplace FROM students where id= ?';
   
         $rs = $this->db->query($sql,array($array['studentsid'])); 
         $row = $rs->result() ; 

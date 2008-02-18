@@ -1,0 +1,22 @@
+#Daftar Fitur sementara yang diperlukan,sebelum ada Fitur lister
+#KodeFitur: F(Fitur).Modul.SubModul.IDNo.Type(MVCT-Optional)
+#KodeFitur,Status,Penjelasan, Tanggal Fitur commit,Nama Developer
+
+A. Modul Master 
+	D. Submodul Students
+		F.A.D.4.MVCT,		N/A,	Edit students,	,	N/A	
+		F.A.D.3.MVCT,	N/A,	Search students,	,	N/A	
+		F.A.D.2.T,N/A,	Test Unit mengakomodasi skenario data input salah,	,	N/A	
+		F.A.D.1.V,N/A,	Validasi input form blank,	,N/A
+
+	C. Submodul Periods
+		F.A.C.2.T,N/A,Test Unit mengakomodasi skenario data input salah,,N/A	
+		F.A.C.1.V,N/A,Validasi input form blank,,
+	
+	B. Submodul Campus
+		F.A.B.2.T,N/A,Test Unit mengakomodasi skenario data input salah,,N/A	
+		F.A.B.1.V,N/A,Validasi input form blank,,
+		
+	A. Submodul Region
+		F.A.A.2.T,N/A,Test Unit mengakomodasi skenario data input salah,,N/A	
+		F.A.A.1.V,N/A,Validasi input form blank,,N/A

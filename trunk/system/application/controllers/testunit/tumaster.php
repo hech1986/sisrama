@@ -119,6 +119,7 @@ class TUMaster extends Controller
 		//create
         $arrPost = array('regno' => 'student1'
 									,'name' => 'RADHITYA'
+									,'class' => '1A'
 									,'parent' => 'B&F'
 									,'address' => 'Jl. Jawa'
 									,'city' => 'Depok'
@@ -136,6 +137,7 @@ class TUMaster extends Controller
 		//UPDATE
 		$arrPost = array('regno' => 'student1'
 							,'name' => 'RADHITYA RIZQI'
+							,'class' => '1A'
 							,'parent' => 'B&F'
 							,'address' => 'Jl. Jawa'
 							,'city' => 'Depok'
@@ -160,6 +162,101 @@ class TUMaster extends Controller
         echo $this->unit->run($row[0]->resultRec, 0, 'Master Students Model Remove' );
 		
 	}
+
+	function testRoomsModel()
+	{
+		//todo: create complete test unit to check table depedency
+		//prepare
+		$this->load->library('unit_test');
+		
+		//model
+		$this->load->model('master/RoomsModel');
+		
+		//create
+		$arrPost = array('name' => 'roomtest'
+									 ,'parent' => 'parenttest'
+									 ,'regionid'=>99999
+									 ,'studentheadid'=>9999999999999
+									 ,'campusid' =>99999
+									 ,'capacity' =>999);
+
+		$this->RoomsModel->saveRooms($arrPost);
+		
+		$sql = 'SELECT id,name FROM rooms where name=?';
+		$rs = $this->db->query($sql,array($arrPost['name'])); 
+		$row = $rs->result() ; 
+		echo $this->unit->run($row[0]->name, $arrPost['name'], 'Master Rooms Model Save' );
+
+		//UPDATE
+		$arrPost = array('name' => 'roomtestupdate'
+									,'parent' => 'parenttest'
+									,'regionid'=>99999
+									,'studentheadid'=>999999999999
+									,'campusid' =>99999
+									,'capacity' =>999
+									,'roomsid'=> $row[0]->id);
+
+		$this->RoomsModel->saveRooms($arrPost);
+
+		$sql = 'SELECT id,name FROM rooms where id=?';
+		$rs = $this->db->query($sql,array($row[0]->id)); 
+		$row = $rs->result() ;
+		echo $this->unit->run($row[0]->name,$arrPost['name'] , 'Master Rooms Model Update' );
+
+		//remove test record
+		$this->RoomsModel->removeRooms($arrPost);
+
+		$sql = 'SELECT count(*) as resultRec FROM rooms where id= ? ';
+		$rs = $this->db->query($sql,array($row[0]->id)); 
+		$row = $rs->result() ; 
+		echo $this->unit->run($row[0]->resultRec, 0, 'Master Rooms Model Remove' );
+			
+		}
+		
+		function testStudentRoomModel()
+		{
+			//prepare
+			//todo: create complete test unit to check table depedency
+			$this->load->library('unit_test');
+			
+			//model
+			$this->load->model('master/StudentRoomModel');
+			
+			//assign student room
+			$arrPost['studentid'] = array(1,2,3,4,5);
+			$arrPost['roomidfrom']='';
+			$arrPost['roomidto']=1;
+			$this->StudentRoomModel->savePlacement($arrPost);
+		
+			$sql = 'SELECT count(*) as resultRec FROM studentroom WHERE studentid IN ( ?,?,?,?,?)';
+			$rs = $this->db->query($sql,$arrPost['studentid']); 
+			$row = $rs->result() ; 
+			echo $this->unit->run($row[0]->resultRec, 5, 'Master StudentRoom Model Save' );
+
+			//change student room
+			$arrPost['studentid'] = array(1,2,3,4,5);
+			$arrPost['roomidfrom']=1;
+			$arrPost['roomidto']=2;
+			$this->StudentRoomModel->savePlacement($arrPost);
+		
+			$sql = 'SELECT count(*) as resultRec FROM studentroom WHERE roomid =?';
+			$rs = $this->db->query($sql,array($arrPost['roomidto'])); 
+			$row = $rs->result() ; 
+			echo $this->unit->run($row[0]->resultRec, 5, 'Master StudentRoom Model Update' );
+			
+			//empty room(delete all student from that room)
+			$arrPost['studentid'] = array(1,2,3,4,5);
+			$arrPost['roomidfrom']=2;
+			$arrPost['roomidto']='';
+			$this->StudentRoomModel->savePlacement($arrPost);
+		
+			$sql = 'SELECT count(*) as resultRec FROM studentroom WHERE roomid=? and studentid IN ( ?,?,?,?,?) ';
+			
+			$rs = $this->db->query($sql,array(2,1,2,3,4,5)); 
+			$row = $rs->result() ; 
+			echo $this->unit->run($row[0]->resultRec, 0, 'Master StudentRoom Model Remove' );
+
+		}
 }
 
 ?> 
