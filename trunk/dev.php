@@ -1,0 +1,12 @@
+<a href="http://localhost/sisrama/index.php/master/region/listregion">List Region</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/testregionmodel">(Test Unit Region)</a><br>
+<a href="http://localhost/sisrama/index.php/master/campus/listcampus">List Campus</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/testcampusmodel">(Test Unit Campus)</a><br>
+<a href="http://localhost/sisrama/index.php/master/periods/listperiods">List Periods</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/testperiodsmodel">(Test Unit Periods)</a><br>
+<a href="http://localhost/sisrama/index.php/master/students/liststudents">List Students</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/teststudentsmodel">(Test Unit Students)</a><br>
+<a href="http://localhost/sisrama/index.php/master/rooms/listrooms">List Rooms</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/testroomsmodel">(Test Unit Rooms)</a><br>
+<a href="http://localhost/sisrama/index.php/master/studentroom/liststudentroom">List StudentRoom</a>
+<a href="http://localhost/sisrama/index.php/testunit/tumaster/teststudentroommodel">(Test Unit StudentRoom)</a><br>
