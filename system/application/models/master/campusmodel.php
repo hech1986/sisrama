@@ -7,21 +7,28 @@
         parent::Model(); 
      } 
     
-    function listCampus() 
+    function listCampus($from,$count) 
     { 
 
-        $rs = $this->db->query('SELECT id,name FROM campus order by name'); 
+		$this->db->order_by("campusname", "asc"); 
+		$rs=$this->db->get('campus',$from,$count);
         $row = $rs->result() ; 
           
         return $row; 
     } 
     
+	function countCampus()
+	{
+		$this->db->from('campus');
+		return $this->db->count_all_results();
+	}
+
     function saveCampus($arrPost)
     {
         $this->load->helper('array');
         
         $data = array(
-            'name' =>  $arrPost['campusname']
+            'campusname' =>  $arrPost['campusname']
         );
         
         
@@ -34,31 +41,36 @@
         } 
         else
         {
-            $sql = 'UPDATE sisrama.campus SET name = ? WHERE campus.id = ?';
+            //$sql = 'UPDATE sisrama.campus SET name = ? WHERE campus.id = ?';
             
-            $this->db->query($sql,array($data['name'],$campusId)); 
+            //$this->db->query($sql,array($data['name'],$campusId)); 
+			$this->db->update('campus', $data, "campusid = ".$campusId);
             log_message('debug', '>>>$sql: '.$this->db->last_query());
             
         } 
     }
     
-    function editCampus($array)
+    function editCampus($id)
     {
         //get by id
-        $sql='SELECT id,name FROM campus where id= ?';
+        //$sql='SELECT id,name FROM campus where id= ?';
   
-        $rs = $this->db->query($sql,array($array['campusid'])); 
+        //$rs = $this->db->query($sql,array($array['campusid'])); 
+		$this->db->where('campusid', $id);
+		$rs=$this->db->get('campus');
         $row = $rs->result() ; 
-        
         
         return $row;
     }
     
-    function removeCampus($array)
+    function removeCampus($id)
     {
         
-        $sql='DELETE FROM campus where id= ?';
-        $rs = $this->db->query($sql,array($array['campusid'])); 
+        //$sql='DELETE FROM campus where id= ?';
+        //$rs = $this->db->query($sql,array($array['campusid'])); 
+		$this->db->where('campusid', $id);
+		$this->db->delete('campus'); 
+
         log_message('debug', '>>>$sql: '.$this->db->last_query());
 
     }

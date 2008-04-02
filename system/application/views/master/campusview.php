@@ -1,7 +1,3 @@
-<? 
-    $this->load->helper('url');
-
-?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><!-- #BeginTemplate "/Templates/ats.dwt" -->
 <head>
@@ -61,7 +57,7 @@ break;
   <tr> 
     <td align="right">
 	 	<input type="button" class="formbox" value=" Save " OnClick="javascript:this.form.submit()">
-	 	<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/campus/listcampus");?>'">
+	 	<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/campus/page");?>'">
 	 	<input type="button" class="formbox" value=" Close " OnClick="javascript:window.close()">
 	</td>
   </tr>  
@@ -71,7 +67,9 @@ break;
 
   <tr>
     <td><!-- #BeginEditable "table" -->
-      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<?=$paging;?>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr> 
           <td class="palareport" width="10%">No</td>
           <td class="palareport">Campus</td>
@@ -84,8 +82,8 @@ break;
             <tr> 
                 <td class="kiritabel">&nbsp;<?=++$line?></td>
                 <td class="isitabel">&nbsp;
-                    <a href="<?=site_url("master/campus/edit/campusid/".$item->id);?>"><?=$item->name ?></a>&nbsp;&nbsp;
-                    <a href="<?=site_url("master/campus/remove/campusid/".$item->id);?>">(hapus)</a>
+                    <a href="<?=site_url("master/campus/edit/campusid/".$item->campusid);?>"><?=$item->campusname ?></a>&nbsp;&nbsp;
+                    <a href="<?=site_url("master/campus/remove/campusid/".$item->campusid);?>">(hapus)</a>
                 </td>
         </tr>
         <? }?>
@@ -94,11 +92,7 @@ break;
 
   </tr>
 </table>
-<table width="95%" cellspacing=0 cellpadding=0 align="center">
-        <tr align="center"> 
-	<td colspan="2" height="22" class="footer" align="center">Powered by PPIA 0.3 
-            </td>
-        </tr>
-      </table>
+		<?=$paging;?>
+  
 </body>
 </html>

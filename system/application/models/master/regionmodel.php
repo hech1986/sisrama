@@ -6,22 +6,30 @@
     // Call the Model constructor 
         parent::Model(); 
      } 
-    
-    function listRegion() 
-    { 
 
-        $rs = $this->db->query('SELECT id,name FROM regions order by name'); 
+    function listRegion($from,$count) 
+    { 
+		
+		$this->db->order_by("regionname", "asc"); 
+		$rs=$this->db->get('region',$from,$count);
         $row = $rs->result() ; 
-          
+		//echo $this->db->last_query();
         return $row; 
     } 
     
+	function countRegion()
+	{
+		$this->db->from('region');
+		return $this->db->count_all_results();
+	
+	}
+	
     function saveRegion($arrPost)
     {
         $this->load->helper('array');
         
         $data = array(
-            'name' =>  $arrPost['regionname']
+            'regionname' =>  $arrPost['regionname']
         );
         
         
@@ -29,37 +37,29 @@
         
         if ($regionId == null)
         {
-            $this->db->insert('regions', $data); 
-            log_message('debug', '>>>$sql: '.$this->db->last_query());
+            $this->db->insert('region', $data); 
         } 
         else
         {
-            $sql = 'UPDATE sisrama.regions SET name = ? WHERE regions.id = ?';
-            
-            $this->db->query($sql,array($data['name'],$regionId)); 
-            log_message('debug', '>>>$sql: '.$this->db->last_query());
+            $this->db->update('region', $data, "regionid = ".$regionId);
             
         } 
+	//	echo $this->db->last_query();
     }
     
-    function editRegion($array)
+    function editRegion($id)
     {
         //get by id
-        $sql='SELECT id,name FROM regions where id= ?';
-  
-        $rs = $this->db->query($sql,array($array['regionid'])); 
+		$this->db->where('regionid', $id);
+
+		$rs=$this->db->get('region');
         $row = $rs->result() ; 
-        
-        
         return $row;
     }
     
-    function removeRegion($array)
+    function removeRegion($id)
     {
-        
-        $sql='DELETE FROM regions where id= ?';
-        $rs = $this->db->query($sql,array($array['regionid'])); 
-        log_message('debug', '>>>$sql: '.$this->db->last_query());
-
+		$this->db->where('regionid', $id);
+		$this->db->delete('region'); 
     }
 }
