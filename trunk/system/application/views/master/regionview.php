@@ -1,14 +1,7 @@
-<? 
-    $this->load->helper('url');
-
-?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><!-- #BeginTemplate "/Templates/ats.dwt" -->
+<html>
 <head>
 
-
 <SCRIPT LANGUAGE="JavaScript">
-
 <!-- Begin
 function placeFocus() {
 if (document.forms.length > 0) {
@@ -22,9 +15,7 @@ break;
              }
         }
 //  End -->
-
 </script>
-
 
 <!-- #BeginEditable "doctitle" --> 
 <title>Master Rayon</title>
@@ -33,20 +24,14 @@ break;
 <link rel="stylesheet" href="themes/default/template.css" type="text/css">
 </head><body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" onLoad="placeFocus()">
 
-
-
 <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
-  <!--tr> 
-    <td align="right"><img src="images/atslogo.jpg" width="42" height="30"></td>
-  </tr-->
   <tr> 
     <td align="right" valign="center" class="submenu"><img src="images/dn_logo_smallest.gif"  align="left"><!-- #BeginEditable "judul" -->Master Rayon<!-- #EndEditable --></td>
   </tr>
   <tr> 
     <td> 
       &nbsp;
-<form name="region" method="post" action="<?=site_url("master/region/save");?>">
-
+<form name="region" method="post" action="<?=site_url("master/region/save");?>"> 
       <!-- #BeginEditable "isi" -->
       <table width="100%" border="0" cellpadding="0" cellspacing="0" dwcopytype="CopyTableCell">
         <tr> 
@@ -63,16 +48,18 @@ break;
 	 	<input type="button" class="formbox" value=" Save " OnClick="javascript:this.form.submit()">
 	 	
 	 	
-		<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/region/listregion");?>'">
+		<input type="button" class="formbox" value=" Refresh " OnClick="javascript:window.location='<?=site_url("master/region/page");?>'">
 	 	
 	 	<input type="button" class="formbox" value=" Close " OnClick="javascript:window.close()">
 	 	    </td>
   </tr>  <tr> 
     <td align="right">&nbsp;</td>
   </tr>
-
+<?=$this->validation->error_string; ?>
   <tr>
     <td><!-- #BeginEditable "table" -->
+	<?=$paging;?>
+
       <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr> 
           <td class="palareport" width="10%">No</td>
@@ -81,28 +68,23 @@ break;
         <?  
 
 
-            $line=0;
+            $line=0+$page= $this->uri->segment(4, 0);
             foreach($regionList as $item) {
         ?>
             
             <tr> 
                 <td class="kiritabel">&nbsp;<?=++$line?></td>
                 <td class="isitabel">&nbsp;
-                    <a href="<?=site_url("master/region/edit/regionid/".$item->id);?>"><?=$item->name ?></a>&nbsp;&nbsp;
-                    <a href="<?=site_url("master/region/remove/regionid/".$item->id);?>">(hapus)</a>
+                    <a href="<?=site_url("master/region/edit/regionid/".$item->regionid);?>"><?=$item->regionname ?></a>&nbsp;&nbsp;
+                    <a href="<?=site_url("master/region/remove/regionid/".$item->regionid);?>">(hapus)</a>
                 </td>
         </tr>
         <? }?>
 		        </table>
+				<?=$paging;?>
       <!-- #EndEditable --></td>
 
   </tr>
 </table>
-<table width="95%" cellspacing=0 cellpadding=0 align="center">
-        <tr align="center"> 
-	<td colspan="2" height="22" class="footer" align="center">Powered by PPIA 0.3 
-            </td>
-        </tr>
-      </table>
 </body>
 </html>
