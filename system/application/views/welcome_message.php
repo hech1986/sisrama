@@ -45,8 +45,8 @@ code {
 
 <h1>SISRAMA</h1>
 
-<b>Master</b><br>
 <p>
+<b>Master</b><br>
 <i>.:Wilayah</i><br>
 <a target="_blank"  href="http://localhost/sisrama/index.php/master/consulate/page">Konsulat</a><br>
 <a target="_blank"  href="http://localhost/sisrama/index.php/master/city/page">Kota/Kabupaten</a><br>
@@ -63,13 +63,39 @@ code {
 <a  target="_blank" href="http://localhost/sisrama/index.php/master/period/page">Periode</a><br>
 </p>
 
-<b>Absensi</b><br>
 <p>
+<b>Absensi</b><br>
 <i>.:Absensi</i><br>
 <a  target="_blank" href="http://localhost/sisrama/index.php/presence/studentroom/page">Siswa Kamar</a><br>
 <a  target="_blank" href="http://localhost/sisrama/index.php/presence/studentclass/page">Siswa Kelas</a><br>
-<!--<a  target="_blank" href="http://localhost/sisrama/index.php/presence/presence/page">Absensi</a><br>
--->
+<a  target="_blank" href="http://localhost/sisrama/index.php/presence/presence/page">Absensi  (Mockup)</a><br>
+</p>
+<p>
+<b>Perijinan</b><br>
+<i>.:Perijinan</i><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/permit/permit/page">Perijinan (Mockup)</a><br>
+</p>
+<p>
+<b>Report</b><br>
+<i>.:Absensi</i><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/absencerep/byroom">Rekap per Kamar (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/absencerep/inabsentia">Rekap Ketidakhadiran (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/absencerep/byroom">Rekap All Data Kamar (Mockup)</a><br>
+<br>
+<i>.:Perijinan</i><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/permitrep/byStudent">Rekap per santri (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/permitrep/listPermit">Daftar Santri Ijin (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/permitrep/byClass">Rekap Ijin Per Kelas (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/permitrep/byRoom">Rekap Ijin Per Kamar (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/permitrep/late">Daftar Santri Terlambat (Mockup)</a><br>
+<br>
+<i>.:Santri</i><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/infobyroom">Data Santri per Kamar (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/infobyclass">Data Santri per Kelas (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/byclass">Rekap Kelas (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/byroom">Rekap Kamar (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/byregion">Rekap Konsulat (Mockup)</a><br>
+<a  target="_blank" href="http://localhost/sisrama/index.php/report/studentrep/bycity">Rekap Kabupaten (Mockup)</a><br>
 </p>
 
 
