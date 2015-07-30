@@ -1,0 +1,1 @@
+Boarding school management system. Included modules: student management, teacher management, room management and study management.
